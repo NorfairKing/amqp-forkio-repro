@@ -1,0 +1,7 @@
+resolver: lts-15.15
+packages:
+- worker
+- sender
+extra-deps:
+- github: NorfairKing/amqp
+  commit: 95deadbb67487a5dcd8aa4788936ab20fbf109c9

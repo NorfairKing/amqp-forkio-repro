@@ -1,0 +1,36 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           worker
+version:        0.0.0
+copyright:      Copyright (c) 2020 Tom Sydney Kerckhove
+build-type:     Simple
+
+library
+  exposed-modules:
+      Worker
+  other-modules:
+      Paths_worker
+  hs-source-dirs:
+      src
+  build-depends:
+      amqp
+    , async
+    , base >=4.7 && <5
+    , bytestring
+  default-language: Haskell2010
+
+executable worker-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_worker
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , worker
+  default-language: Haskell2010
